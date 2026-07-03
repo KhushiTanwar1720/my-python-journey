@@ -1,0 +1,28 @@
+import random #by using random module comp choose randomly
+choose = ["Rock","Paper","Scissor"]
+game_is_running = True
+while game_is_running:
+    user = input("Enter Rock,Paper,Scissor").capitalize()
+    print(user)
+    comp = random.choice(choose)
+    print(comp)
+    if user == comp:#if user are equal to comp 
+      print("Match is Draw")
+    elif (user == "Scissor" and comp == "Paper")or\
+         (user == "Rock" and comp == "Scissor")or\
+         (user == "Paper" and comp == "Rock"):
+         print("user is winner")
+    elif (user == "Paper" and comp == "Scissor")or\
+         (user == "Scissor" and comp == "Rock")or\
+         (user == "Rock" and comp == "Paper"):
+        print("comp is winner") 
+    else:
+        print("Invalid choice! Please enter Rock, Paper, Scissor")
+
+    play = input("do you want play again? (Yes/No)" ).capitalize()
+    if play == "Yes":
+      #continue playing
+      continue
+    elif play == "No":
+      game_is_running = False
+print("Thankyou for playing")
