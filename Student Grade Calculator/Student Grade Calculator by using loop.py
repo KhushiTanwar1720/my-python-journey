@@ -1,0 +1,26 @@
+valid = True
+Total = 0
+for i in range(3):
+  marks = float(input("Enter the marks"))
+  if (marks < 0 or marks>100 ):
+    print("Invalid input")
+    valid = False
+  else:
+      Total = Total + marks
+if valid:
+    print("Total Marks:",Total)
+    maximum_marks = 300
+    Percentage = ( Total / maximum_marks )*100
+    print(f"Percentage:{Percentage:.2f}%")
+    if Percentage >= 90:
+        print("Grade A")
+    elif Percentage >=80:
+        print("Grade B")
+    elif Percentage >=70:
+        print("Grade C")
+    elif Percentage >=60:
+        print("Grade D")
+    else:
+        print("Grade E") 
+else:
+    print("Calculation cannot be done.")
