@@ -17,7 +17,7 @@ while True:
 
     if choice == "1":
         name = input("Enter the name: ")
-        phone_number = input("Enter the number: ")
+        phone_number = input("Enter the number: E")
 
         if name in contact_numbers:
             print("Contact already exists.")
