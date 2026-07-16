@@ -2,7 +2,7 @@ import random #by using random module comp choose randomly
 choose = ["Rock","Paper","Scissor"]
 game_is_running = True
 while game_is_running:
-    user = input("Enter Rock,Paper,Scissor").capitalize()
+    user = input("Enter Rock,Paper,Scissor: ").capitalize()
     print(user)
     comp = random.choice(choose)
     print(comp)
@@ -19,7 +19,7 @@ while game_is_running:
     else:
         print("Invalid choice! Please enter Rock, Paper, Scissor")
 
-    play = input("do you want play again? (Yes/No)" ).capitalize()
+    play = input("do you want play again? (Yes/No): " ).capitalize()
     if play == "Yes":
       #continue playing
       continue

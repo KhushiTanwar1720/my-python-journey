@@ -1,7 +1,7 @@
 valid = True
 Total = 0
 for i in range(3):
-  marks = float(input("Enter the marks"))
+  marks = float(input("Enter the marks: "))
   if (marks < 0 or marks>100 ):
     print("Invalid input")
     valid = False
@@ -23,4 +23,4 @@ if valid:
     else:
         print("Grade E") 
 else:
-    print("Calculation cannot be done.")
+    print("Calculation cannot be done. ")
