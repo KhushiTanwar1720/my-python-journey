@@ -20,15 +20,32 @@ def total_expense():
     total = 0
     for expense in expenses:
         total = total + expense["amount"]
-        print("Total Expense:",total)
-        print("--------------------")
+    print("Total Expense:",total)
+    print("--------------------")
 
+def category_total():
+    category_totals ={}
+    
+    for expense in expenses:
+        category = expense["category"]
+        amount = expense["amount"]
+        
+        if category in category_totals:
+            category_totals[category] += amount
+        else:
+            category_totals[category] = amount
+            
+    print("\nCategory-wise Total:")
+    for category, total in category_totals.items():
+        print(category, ":", total)
+            
 while True:
     print("\n Expense Tracker!")
     print("1. Add Expenses")
     print("2. View Expense")
     print("3. Total Expense")
-    print("4. Exit")
+    print("4. Category-wise Total")
+    print("5. Exit")
     
     choice = input("Enter your choice: ")
     
@@ -39,6 +56,8 @@ while True:
     elif choice == "3":
         total_expense()
     elif choice == "4":
+        category_total()
+    elif choice == "5":
         print("Thank You! ")
         break
     else:
