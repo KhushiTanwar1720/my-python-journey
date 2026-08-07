@@ -1,10 +1,10 @@
 expenses = []
-def add_expenses():
-    expenses_name = input("Enter the expense name: ")
+def add_expense():
+    expense_name = input("Enter the expense name: ")
     amount = int(input("Enter the amount: "))
     category = input("Enter the category: ")
     expense = {
-        "name":expenses_name,
+        "name":expense_name,
         "amount":amount,
         "category":category
     }    
@@ -59,7 +59,7 @@ while True:
     choice = input("Enter your choice: ")
     
     if choice == "1":
-        add_expenses()
+        add_expense()
     elif choice == "2":
         view_expenses()
     elif choice == "3":
