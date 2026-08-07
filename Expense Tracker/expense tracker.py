@@ -10,14 +10,20 @@ def add_expenses():
     }    
     expenses.append(expense)
 def view_expenses():
+    if not expenses:
+        print("No expenses added yet.")
+        return
     for expense in expenses:
         print("Name:",expense["name"])
         print("Amount:",expense["amount"])
         print("Category:",expense["category"])
         print("----------------------")
 def total_expense():
-    
     total = 0
+    if not expenses:
+        print("No expenses added yet.")
+        return
+
     for expense in expenses:
         total = total + expense["amount"]
     print("Total Expense:",total)
@@ -25,6 +31,9 @@ def total_expense():
 
 def category_total():
     category_totals ={}
+    if not expenses:
+        print("No expenses added yet.")
+        return
     
     for expense in expenses:
         category = expense["category"]
