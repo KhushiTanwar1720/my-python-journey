@@ -67,5 +67,5 @@ This is primarily a personal learning repository, but suggestions and constructi
 
 ## ⭐ Support
 
-If you find this learning journey interesting, consider giving the repository a .⭐.
+If you find this learning journey interesting, consider giving the repository a ⭐.
 
